@@ -20,7 +20,7 @@ class script {
         if ($token=="super_secret_token") {
             \response\script::json( [
                 'error'=>false,
-                'data'=>'You are logged id'
+                'data'=>'You are logged in'
             ]);
         } else if ($username=="marco" &&  $password=="12345") {
             \response\script::json( [

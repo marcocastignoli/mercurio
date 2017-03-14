@@ -113,6 +113,9 @@ app.controller('actionController', function($scope, $http, $routeParams, $cookie
             action:$routeParams.action
         }
         args.arguments = $scope.form
+        if (args.arguments==null) {
+            args.arguments=[]
+        }
         for (id in $scope.hiddens){
             var hidden = $scope.hiddens[id]
             var value = hidden.value

@@ -2,7 +2,11 @@
 $category=@$_GET['category'];
 $name=@$_GET['name'];
 $action=@$_GET['action'];
-$arguments=json_decode(@$_GET['arguments'],true);
+$arg=@$_GET['arguments'];
+$arguments=json_decode($arg, true);
+if ($arguments==false && $arg!="") {
+    $arguments=array($arg);
+}
 if (!isset($arguments)) {
     $arguments=array();
 }
