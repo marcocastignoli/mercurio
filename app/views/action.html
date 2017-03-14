@@ -1,0 +1,21 @@
+<div class="">
+    <a href="{{backurl}}">Back</a>
+    <form class="form-horizontal" ng-submit="submit()">
+        <fieldset ng-show="!error">
+            <legend>{{title}}</legend>
+            <p>{{description}}</p>
+            <div ng-repeat="t in types">
+                <div ng-include="'views/types/'+t.type+'.html'">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-10">
+                    <button type="submit">Calcola</button>
+                </div>
+            </div>
+        </fieldset>
+
+        <br>
+        <pre>{{ result }}</pre>
+    </form>
+</div>
