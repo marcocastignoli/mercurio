@@ -26,7 +26,7 @@ app.controller('categoryController', function($scope, $http, $routeParams) {
     var args={
         category:'script',
         name:'plugin',
-        action:'list'
+        action:'list_'
     }
     $http.get(server, {params:args}).then(res=>{
         $scope.title="All packages"

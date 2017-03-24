@@ -3,7 +3,7 @@ namespace plugin;
 /**
 * @title Plugins
 * @description Manage and call your plugins
-* @method list List all plugins
+* @method list_ List all plugins
 * @method info Get plugins informations
 */
 class script {
@@ -93,7 +93,7 @@ class script {
     * @description List all plugins
     * @return array
     */
-    static public function list(){
+    static public function list_(){
         \response\script::json(array(
             'error'=>false,
             'data'=>self::scan_dir()
